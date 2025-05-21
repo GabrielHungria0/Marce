@@ -13,12 +13,14 @@ public abstract class Conta {
     private String numeroDaConta;
     protected float saldo;
     private Cliente cliente;
+    private TipoCliente tipo;
     
     public Conta(String numeroDaConta,Cliente cliente) {
         
         if (cliente == null) {
-        throw new IllegalArgumentException("Cliente nao pode ser nulo");
-    }    
+            throw new IllegalArgumentException("Cliente nao pode ser nulo");
+        }    
+        this.tipo = cliente.getTipo();
         this.cliente = cliente;
         this.numeroDaConta = numeroDaConta;
         this.saldo=0;
@@ -43,8 +45,11 @@ public abstract class Conta {
         if (cliente == null) {
             throw new IllegalArgumentException("Cliente nao pode ser nulo");
         }else{
-               this.cliente = cliente;
+            if(cliente.getTipo() != this.tipo) {
+                throw new IllegalArgumentException("Este tipo de conta aceita apenas " + this.tipo.name() + ".");
             }
+            this.cliente = cliente;
+        }
     }
     
     

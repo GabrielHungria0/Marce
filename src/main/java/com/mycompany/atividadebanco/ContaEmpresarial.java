@@ -18,14 +18,6 @@ public class ContaEmpresarial extends Conta {
         super(numeroDaConta,cliente);
         this.chequeEspecial = chequeEspecial;
     }
-    
-     @Override
-    public void setCliente(Cliente cliente) {
-        if (!cliente.eDoTipo(TipoCliente.PessoaJuridica)) {
-            throw new IllegalArgumentException("Conta Empresarial aceita apenas Pessoa Juridicas");
-        }
-        super.setCliente(cliente); 
-    }
 
     public float getChequeEspecial() {
         return chequeEspecial;

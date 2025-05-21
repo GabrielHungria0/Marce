@@ -8,7 +8,7 @@ package com.mycompany.atividadebanco;
  *
  * @author gabri
  */
-public class ContaPoupanca extends Conta{
+public class ContaPoupanca extends Conta {
     
     public ContaPoupanca(String numeroDaConta, PessoaFisica cliente) {
         super(numeroDaConta, cliente);
@@ -18,15 +18,6 @@ public class ContaPoupanca extends Conta{
         this.saldo = this.saldo + this.saldo*(0.5f/100);
         return this.saldo;
     }
-    
-     @Override
-    public void setCliente(Cliente cliente) {
-        if (!(cliente instanceof PessoaFisica)) {
-            throw new IllegalArgumentException("Conta Poupanca aceita apenas Pessoa Física");
-        }
-        super.setCliente(cliente); 
-    }
-
     
     @Override
      public  boolean transferir(Conta transferencia,float valor){
