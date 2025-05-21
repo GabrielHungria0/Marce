@@ -1,0 +1,10 @@
+com\mycompany\atividadebanco\Conta.class
+com\mycompany\atividadebanco\Cliente.class
+com\mycompany\atividadebanco\PessoaFisica.class
+com\mycompany\atividadebanco\ContaCorrente.class
+com\mycompany\atividadebanco\AtividadeBanco.class
+com\mycompany\atividadebanco\ContaEspecial.class
+com\mycompany\atividadebanco\ContaPoupanca.class
+com\mycompany\atividadebanco\ContaEmpresarial.class
+com\mycompany\atividadebanco\PessoaJuridica.class
+com\mycompany\atividadebanco\TipoCliente.class
